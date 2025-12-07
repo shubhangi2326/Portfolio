@@ -1,0 +1,365 @@
+/* =========================================
+   GLOBAL THEME SETTINGS
+   ========================================= */
+:root {
+  --main-bg: #0b0b13;
+  --purple-primary: #c084fc;
+  --purple-secondary: #a855f7;
+  --text-white: #ffffff;
+  --text-gray: #e5e7eb;
+}
+
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif !important;
+  background-color: var(--main-bg) !important;
+  color: var(--text-white) !important;
+  overflow-x: hidden;
+}
+
+/* =========================================
+   COMMON SECTION STYLING
+   ========================================= */
+
+/* Desktop View Padding */
+.section-bg {
+  background-color: var(--main-bg);
+  background-image: radial-gradient(at 0% 0%, #2d1b4e 0px, transparent 50%),
+                    radial-gradient(at 100% 100%, #2d1b4e 0px, transparent 50%);
+  min-height: 100vh;
+  padding-top: 150px; /* Desktop gap */
+  padding-bottom: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-white) !important;
+  font-weight: 700;
+}
+
+p {
+  color: var(--text-gray);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Purple Text Highlights */
+.text-purple {
+  background: linear-gradient(to right, var(--purple-primary), var(--purple-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.purple {
+  color: var(--purple-primary) !important;
+  font-weight: 600;
+}
+
+.project-heading {
+  font-size: 2.3em;
+  font-weight: 700;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* =========================================
+   GLASSMORPHISM CARDS
+   ========================================= */
+.glass-card {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2) !important;
+  backdrop-filter: blur(5px);
+  border-radius: 15px !important;
+  transition: all 0.4s ease;
+  color: var(--text-white) !important;
+  height: 100%;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--purple-primary) !important;
+  box-shadow: 0 10px 40px -10px rgba(168, 85, 247, 0.4) !important;
+}
+
+.card-body, .card-title, .card-text {
+  color: var(--text-white) !important;
+}
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+.btn-primary {
+  background: linear-gradient(135deg, var(--purple-secondary) 0%, #7e22ce 100%) !important;
+  border: none !important;
+  color: white !important;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(126, 34, 206, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, var(--purple-primary) 0%, #9333ea 100%) !important;
+  box-shadow: 0 8px 20px rgba(126, 34, 206, 0.5);
+}
+
+/* =========================================
+   NAVBAR STYLES
+   ========================================= */
+.navbar {
+  padding: 15px 0 !important;
+  transition: all 0.3s ease-out;
+  background-color: transparent !important;
+}
+
+.navbar-brand {
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.sticky {
+  background-color: #1b1a2ea9 !important;
+  backdrop-filter: blur(15px);
+  box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171);
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+  padding-right: 20px !important;
+  padding-left: 20px !important;
+  font-weight: 500;
+  font-size: 1.1em !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #c084fc !important;
+  transform: translateY(-2px);
+}
+
+.navbar-toggler {
+  position: relative !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+.navbar-toggler span {
+  display: block;
+  background-color: #ffffff;
+  height: 3px;
+  width: 25px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  transform: rotate(0deg);
+  transition: .35s ease-in-out;
+}
+
+/* =========================================
+   PROJECT CARDS & IMAGES
+   ========================================= */
+.project-row {
+    row-gap: 50px;
+}
+
+.project-card-view {
+    background: rgba(20, 20, 30, 0.6) !important; 
+    border: 1px solid rgba(168, 85, 247, 0.2) !important; 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 20px !important;
+    padding: 20px !important;
+    height: 100%; /* Fixed height to fit content */
+    transition: all 0.4s ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    overflow: hidden;
+}
+
+.project-card-view:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 20px 40px -10px rgba(168, 85, 247, 0.4) !important; 
+    border-color: #c084fc !important;
+}
+
+.project-card-view img {
+    border-radius: 15px;
+    width: 100%;
+    height: 180px; /* Increased height for better visibility */
+    object-fit: cover; 
+    margin-bottom: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.project-card-view .card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.tech-stack-text {
+    color: #c084fc; 
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.project-description {
+    color: #d1d5db; 
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: 20px;
+    flex-grow: 1; 
+}
+
+.project-card-view .btn-primary {
+    width: 100%;
+    border-radius: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   SOCIAL MEDIA ICONS (Improved Design)
+   ========================================= */
+/* Container styling to align icons */
+.home-about-social-links {
+  justify-content: center;
+  padding-top: 15px;
+  display: inline-block;
+  position: relative;
+  padding-inline-start: 0;
+}
+
+.social-icons-list {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual Icon styling */
+.icon-colour {
+  color: white !important;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* Circle shape */
+  border: 1px solid rgba(192, 132, 252, 0.5); /* Slight Purple border */
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none !important;
+}
+
+/* Social Icon Hover Effect */
+.icon-colour:hover {
+  background-color: #c084fc !important; /* Purple Background */
+  color: white !important;
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 0 15px rgba(192, 132, 252, 0.8);
+}
+
+/* Specific Home Icon glow */
+.home-social-icons {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 40px;
+  background: rgba(255, 255, 255, 0.972);
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+.footer {
+  background-color: var(--main-bg);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 0;
+  color: white;
+  text-align: center;
+}
+
+/* =========================================
+   MEDIA QUERIES (RESPONSIVE FIXES)
+   ========================================= */
+   
+/* Desktop: Align Navbar to Right */
+@media (min-width: 768px) {
+  .navbar-nav {
+      margin-left: auto !important; 
+  }
+  .navbar-collapse {
+      justify-content: flex-end !important;
+  }
+}
+
+/* Mobile Devices (Max Width 767px) */
+@media (max-width: 767px) {
+  
+  /* FIX GAP: Reduce padding on mobile */
+  .section-bg {
+    padding-top: 80px !important; /* Reduced from 150px to 80px */
+    padding-bottom: 30px;
+  }
+
+  /* Fix Navbar Toggle Position */
+  .navbar-toggler {
+      margin-right: 0 !important;
+      outline: none !important;
+  }
+
+  /* Mobile Menu Styling */
+  .navbar-nav {
+      background-color: #181a27;
+      border: 1px solid rgba(192, 132, 252, 0.2);
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 15px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+
+  .navbar-nav .nav-item {
+      margin: 8px 0;
+  }
+
+  /* Text alignments for Home Page */
+  .home-header {
+    text-align: center !important;
+    padding-top: 30px;
+  }
+  
+  /* Make social icons centered on mobile */
+  .d-flex.justify-content-start {
+    justify-content: center !important;
+  }
+
+  /* Typography Adjustments */
+  .heading-name {
+    font-size: 2rem !important;
+  }
+  
+  .Typewriter__wrapper {
+    font-size: 1.5rem !important;
+  }
+}
+
