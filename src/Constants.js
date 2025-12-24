@@ -14,6 +14,4 @@ export const TOOLS = [
   "Visual Studio Code",
   "Postman",
   "Git & GitHub",
-  "Chrome DevTools",
-  "NPM",
 ];
